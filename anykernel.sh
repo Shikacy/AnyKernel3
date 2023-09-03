@@ -24,10 +24,7 @@ patch_vbmeta_flag=auto;
 . tools/ak3-core.sh && attributes;
 
 # boot install
-split_boot; # use split_boot to skip ramdisk unpack, e.g. for devices with init_boot ramdisk
+dump_boot; # use split_boot to skip ramdisk unpack, e.g. for devices with init_boot ramdisk
 
-# install additional module
-. tools/module-install.sh
-
-flash_boot;
+write_boot;
 ## end install
